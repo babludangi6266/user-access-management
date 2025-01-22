@@ -1,23 +1,3 @@
-// import React from "react";
-// import "../styles/Sidebar.css";
-
-// const Sidebar = ({ menuItems, onMenuClick }) => {
-//   return (
-//     <div className="sidebar">
-//       {menuItems.map((item, index) => (
-//         <div
-//           key={index}
-//           className="sidebar-item"
-//           onClick={() => onMenuClick(item.id)}
-//         >
-//           {item.label}
-//         </div>
-//       ))}
-//     </div>
-//   );
-// };
-
-// export default Sidebar;
 import React from "react";
 import "../styles/Sidebar.css";
 import { FaRegClock, FaUser, FaEye, FaClipboardList, FaKey, FaPenFancy, FaServer, FaSyncAlt } from "react-icons/fa";

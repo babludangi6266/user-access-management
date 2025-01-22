@@ -16,17 +16,6 @@ const Header = () => {
             className="company-logo"
           />
         </div>
-        {/* <div className="header-center">
-          <span className="record-id">Record ID</span>
-          <div className="search-container">
-            <FaSearch className="search-icon" />
-            <input
-              type="text"
-              placeholder="Enter search value"
-              className="search-bar"
-            />
-          </div>
-        </div> */}
         <div className="header-box">
   <div className="header-center">
     <span className="record-id">Record ID</span>

@@ -1,0 +1,23 @@
+
+   .sidebar-item {
+    display: flex;
+    align-items: center;
+    padding: 13px;
+    cursor: pointer;
+  }
+  
+  .sidebar-icon {
+    margin-right: 13px;
+    font-size: 21px;
+    color: #020000; /* Customize color */
+  }
+  
+  .sidebar-label {
+    font-size: 16px;
+    color: #362f2f; /* Customize label color */
+  }
+  
+  .sidebar-item:hover {
+    background-color: #f0f0f0;
+  }
+  

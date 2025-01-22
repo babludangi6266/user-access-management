@@ -1,0 +1,44 @@
+
+/* .user-details-container {
+    background-color: #ffffff; 
+    border: 1px solid #ddd;
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    padding: 20px; 
+    max-width: 600px;
+    margin: 0px; 
+    font-family: Arial, sans-serif;
+    color: #333;
+  } */
+  
+  /* Title of the section */
+  .user-details-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #444;
+  }
+  
+  /* Grid container for user details */
+  .user-details-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Label column (1 part), Value column (2 parts) */
+    row-gap: 10px; /* Space between rows */
+    column-gap: 20px; /* Space between columns */
+  }
+  
+  /* Label styling */
+  .user-detail-label {
+    font-weight: bold;
+    color: #555;
+    text-align: left; /* Align labels to the left */
+  }
+  
+  /* Value styling */
+  .user-detail-value {
+    color: #333;
+    text-align: left; /* Align values to the left */
+    overflow-wrap: break-word; /* Prevent long text from breaking layout */
+  }
+  

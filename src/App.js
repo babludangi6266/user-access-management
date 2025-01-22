@@ -215,13 +215,6 @@ function App() {
     setIsPopupOpen(true);
   };
 
-  // const handlePopupAction = () => {
-  //   const nextStageIndex = stages.indexOf(currentStage) + 1;
-  //   if (nextStageIndex < stages.length) {
-  //     setCurrentStage(stages[nextStageIndex]);
-  //   }
-  //   setIsPopupOpen(false);
-  // };
   const handlePopupAction = () => {
     const nextStageIndex = stages.indexOf(currentStage) + 1;
     if (nextStageIndex < stages.length) {
@@ -311,40 +304,6 @@ function App() {
       title: " > Signatures",
       content: "This is the content for Signatures.",
     },
-    // {
-    //   id: "change-details",
-    //   title: " > Change Details",
-    //   content: (
-    //     <div>
-    //       <div className="change-details-nav">
-    //         {stages.map((stage) => (
-    //           <button
-    //             key={stage}
-    //             className="nav-btn"
-    //             style={{ backgroundColor: getStageColor(stage) }}
-    //           >
-    //             {stage.replace("-", " ")}
-    //           </button>
-    //         ))}
-    //       </div>
-    //       <button className="stage-btn" onClick={handleStageButtonClick}>
-    //         {`Send to ${stages[stages.indexOf(currentStage) + 1] || "Completed"}`}
-    //       </button>
-
-    //       {isPopupOpen && (
-    //         <div className="popup">
-    //           <div className="popup-content">
-    //             <p>{`Send to ${
-    //               stages[stages.indexOf(currentStage) + 1] || "Completed"
-    //             }?`}</p>
-    //             <button onClick={handlePopupAction}>Confirm</button>
-    //             <button onClick={() => setIsPopupOpen(false)}>Cancel</button>
-    //           </div>
-    //         </div>
-    //       )}
-    //     </div>
-    //   ),
-    // },
     {
       id: "change-details",
       title: " > Change Details",

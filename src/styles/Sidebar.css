@@ -9,12 +9,12 @@
   .sidebar-icon {
     margin-right: 13px;
     font-size: 21px;
-    color: #020000; /* Customize color */
+    color: #020000;
   }
   
   .sidebar-label {
     font-size: 16px;
-    color: #362f2f; /* Customize label color */
+    color: #362f2f; 
   }
   
   .sidebar-item:hover {

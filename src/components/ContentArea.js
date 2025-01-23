@@ -1,28 +1,25 @@
-import React, { useState } from "react";
-import "../styles/ContentArea.css"
 
-const ContentArea = ({ sections }) => {
-  const [activeSection, setActiveSection] = useState(null);
+import React from "react";
+import "../styles/ContentArea.css";
 
-  const toggleSection = (id) => {
-    setActiveSection(activeSection === id ? null : id);
-  };
-
+const ContentArea = ({ sections, activeSectionId }) => {
   return (
     <div className="content-area">
       {sections.map((section) => (
         <div key={section.id} className="content-section">
           <div
             className="content-section-header"
-            onClick={() => toggleSection(section.id)}
+            onClick={() => {}}
           >
             {section.title}
           </div>
-          {activeSection === section.id && (
-            <div className="content-section-body">
-              {section.content}
-            </div>
-          )}
+          <div
+            className={`content-section-body ${
+              activeSectionId === section.id ? "expanded" : "collapsed"
+            }`}
+          >
+            {section.content}
+          </div>
         </div>
       ))}
     </div>

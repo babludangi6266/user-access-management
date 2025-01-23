@@ -9,7 +9,7 @@ function App() {
   const stages = ["open", "impact-assessment", "approval", "completed"];
   const [currentStage, setCurrentStage] = useState("open");
   const [isPopupOpen, setIsPopupOpen] = useState(false);
-
+  const [activeSectionId, setActiveSectionId] = useState(null); // Track active section
   const getStageColor = (stage) => {
     const currentIndex = stages.indexOf(currentStage);
     const stageIndex = stages.indexOf(stage);
@@ -32,7 +32,6 @@ function App() {
     }
     setIsPopupOpen(false); // Close the popup
   };
-  
 
   const [menuItems] = useState([
     { id: "workflow", label: "Workflow Timeline" },
@@ -43,6 +42,7 @@ function App() {
     { id: "signatures", label: "Signatures" },
     { id: "system-details", label: "System Details" },
     { id: "change-details", label: "Change Details" },
+    { id: "sharing-settings", label: "Sharing Settings" },
   ]);
 
   const [sections] = useState([
@@ -56,39 +56,39 @@ function App() {
       title: " > User Details",
       content: (
         <div className="user-details-container">
-          <div className="user-details-grid">
-            <div className="user-detail-label">Person:</div>
-            <div className="user-detail-value">Reyan Young</div>
+             <div className="user-details-grid">
+             <div className="user-detail-label">Person:</div>
+             <div className="user-detail-value">Reyan Young</div>
 
-            <div className="user-detail-label">First Name:</div>
-            <div className="user-detail-value">Reyan</div>
+             <div className="user-detail-label">First Name:</div>
+             <div className="user-detail-value">Reyan</div>
 
-            <div className="user-detail-label">Last Name:</div>
-            <div className="user-detail-value">Young</div>
+             <div className="user-detail-label">Last Name:</div>
+             <div className="user-detail-value">Young</div>
 
-            <div className="user-detail-label">Employee ID:</div>
-            <div className="user-detail-value">1234567890</div>
+             <div className="user-detail-label">Employee ID:</div>
+             <div className="user-detail-value">1234567890</div>
 
-            <div className="user-detail-label">Email ID:</div>
-            <div className="user-detail-value">Reyan123@gmail.com</div>
+             <div className="user-detail-label">Email ID:</div>
+             <div className="user-detail-value">Reyan123@gmail.com</div>
 
-            <div className="user-detail-label">Branch:</div>
-            <div className="user-detail-value">Biosciences Pvt. Ltd</div>
+             <div className="user-detail-label">Branch:</div>
+             <div className="user-detail-value">Biosciences Pvt. Ltd</div>
 
-            <div className="user-detail-label">Department:</div>
-            <div className="user-detail-value">Automation</div>
+             <div className="user-detail-label">Department:</div>
+             <div className="user-detail-value">Automation</div>
 
             <div className="user-detail-label">Role:</div>
             <div className="user-detail-value">
-              Basic document rights - Document control
-            </div>
+               Basic document rights - Document control
+             </div>
 
-            <div className="user-detail-label">Domain User:</div>
+             <div className="user-detail-label">Domain User:</div>
             <div className="user-detail-value">No</div>
 
-            <div className="user-detail-label">Comments:</div>
-            <div className="user-detail-value">New request</div>
-          </div>
+             <div className="user-detail-label">Comments:</div>
+             <div className="user-detail-value">New request</div>
+           </div>
         </div>
       ),
     },
@@ -131,7 +131,7 @@ function App() {
           <button className="stage-btn" onClick={handleStageButtonClick}>
             {`Send to ${stages[stages.indexOf(currentStage) + 1] || "Completed"}`}
           </button>
-    
+
           {isPopupOpen && (
             <div className="popup">
               <div className="popup-content">
@@ -146,7 +146,6 @@ function App() {
         </div>
       ),
     },
-    
     {
       id: "system-details",
       title: " > System Details",
@@ -160,12 +159,11 @@ function App() {
       <div className="main-container">
         <Sidebar
           menuItems={menuItems}
-          onMenuClick={(id) => console.log(`Clicked on ${id}`)}
+          onMenuClick={(id) => setActiveSectionId(id)} // Update active section on menu click
         />
-        <ContentArea sections={sections} />
+        <ContentArea sections={sections} activeSectionId={activeSectionId} />
       </div>
     </div>
   );
 }
-
 export default App;

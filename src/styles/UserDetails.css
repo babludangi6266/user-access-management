@@ -6,19 +6,19 @@
     color: #444;
   }
   
-  /* Grid container for user details */
+  
   .user-details-grid {
     display: grid;
-    grid-template-columns: 1fr 2fr; /* Label column (1 part), Value column (2 parts) */
-    row-gap: 10px; /* Space between rows */
-    column-gap: 20px; /* Space between columns */
+    grid-template-columns: 1fr 2fr; 
+    row-gap: 10px; 
+    column-gap: 20px; 
   }
   
-  /* Label styling */
+ 
   .user-detail-label {
     font-weight: bold;
     color: #555;
-    text-align: left; /* Align labels to the left */
+    text-align: left;
   }
   
  

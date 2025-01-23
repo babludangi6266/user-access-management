@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Sidebar.css";
-import { FaRegClock, FaUser, FaEye, FaClipboardList, FaKey, FaPenFancy, FaServer, FaSyncAlt } from "react-icons/fa";
+import { FaRegClock, FaUser, FaEye, FaClipboardList, FaKey, FaPenFancy, FaServer, FaSyncAlt , FaShareAlt} from "react-icons/fa";
 
 const Sidebar = ({ menuItems, onMenuClick }) => {
   const icons = {
@@ -12,6 +12,7 @@ const Sidebar = ({ menuItems, onMenuClick }) => {
     "signatures": <FaPenFancy />,
     "system-details": <FaServer />,
     "change-details": <FaSyncAlt />,
+    "sharing-settings": <FaShareAlt/>,
   };
 
   return (
